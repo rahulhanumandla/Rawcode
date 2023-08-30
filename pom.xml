@@ -2,9 +2,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aws.codestar.projecttemplates</groupId>
-    <artifactId>cloudbinary</artifactId>
-    <version>2.0.6</version>
-    <!--<version>9.10.3-SNAPSHOT</version>-->
+    <artifactId>b810am</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Cloud Binary - Sample Spring MVC Application</name>
 
@@ -13,12 +12,12 @@
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-
-        <sonar.host.url>http://54.162.37.218:9000</sonar.host.url>
-        <sonar.organization>cbscancode</sonar.organization>
-        <sonar.projectKey>cbscancode</sonar.projectKey>
-        <sonar.login>sqp_8f728ae720317792df1d439420632714dc996e44</sonar.login>
-
+        <!--
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>kummari</sonar.organization>
+        <sonar.projectKey>kummari_b69am</sonar.projectKey>
+        <sonar.login>3ec29276c1e1d3be60097cd4e7c40c47bb72f33c</sonar.login>
+        -->
     </properties>
 
     <!--
@@ -35,23 +34,23 @@
     </repository>	
 </distributionManagement>
     -->
-        
+    
 <distributionManagement>
-
-    <repository>
-        <id>release</id>
-        <name>jfrog.cloudbinary.io-releases</name>
-        <url>http://54.90.15.148:8081/artifactory/libs-release-local</url>
-    </repository>
-
+    
     <snapshotRepository>
         <id>snapshots</id>
-        <name>jfrog.cloudbinary.io-snapshots</name>
-        <url>http://54.90.15.148:8081/artifactory/libs-snapshot-local</url>
+        <name>libs-snapshot-local</name>
+        <url>http://54.91.233.188:8082/artifactory/libs-snapshot-local/</url>
     </snapshotRepository>
-
-</distributionManagement>
-
+    
+    <repository>
+        <id>releases</id>
+        <name>libs-release-local</name>
+        <url>http://54.91.233.188:8082/artifactory/libs-release-local/</url>
+    </repository>
+    
+</distributionManagement>    
+    
     
     <dependencies>
         <dependency>
