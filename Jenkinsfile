@@ -6,37 +6,37 @@ pipeline {
   }
   stages {
     stage (Stage-1 Clean) {
-      step {
+      steps {
         sh 'mvn clean'
       }
     }
     stage (Stage-2 Validate) {
-      step {
+      steps {
         sh 'mvn validate'
       }
     }
     stage (Stage-3 Compile) {
-      step {
+      steps {
         sh 'mvn compile'
       }
     } 
     stage (Stage-4 Task) {
-      step {
+      steps {
         sh 'mvn task'
       }
     }
     stage (Stage-5 Package) {
-      step {
+      steps {
         sh 'mvn package'
       }
     } 
     stage (Stage-6 Verify) {
-      step {
+      steps {
         sh 'mvn verify'
       }
     }
     stage (Stage-7 Install) {
-      step {
+      steps {
         sh 'mvn install'
       }
     }
