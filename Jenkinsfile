@@ -5,37 +5,37 @@ pipeline {
     maven 'maven'
   }
   stages {
-    stage (Stage-1 Clean) {
+    stage('Stage-1 Clean') {
       steps {
         sh 'mvn clean'
       }
     }
-    stage (Stage-2 Validate) {
+    stage('Stage-2 Validate') {
       steps {
         sh 'mvn validate'
       }
     }
-    stage (Stage-3 Compile) {
+    stage('Stage-3 Compile') {
       steps {
         sh 'mvn compile'
       }
     } 
-    stage (Stage-4 Task) {
+    stage('Stage-4 Task') {
       steps {
         sh 'mvn task'
       }
     }
-    stage (Stage-5 Package) {
+    stage('Stage-5 Package') {
       steps {
         sh 'mvn package'
       }
     } 
-    stage (Stage-6 Verify) {
+    stage('Stage-6 Verify') {
       steps {
         sh 'mvn verify'
       }
     }
-    stage (Stage-7 Install) {
+    stage('Stage-7 Install') {
       steps {
         sh 'mvn install'
       }
