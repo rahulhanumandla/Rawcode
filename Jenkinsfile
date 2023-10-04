@@ -5,6 +5,10 @@ pipeline {
     maven 'maven'
   }
   stages {
+    stage {'Stage - Scanning'}
+      steps {
+        sh 'mvn sonar:sonar'
+      }
     stage ('Stage-1 Clean 1') {
       steps {
         sh 'mvn clean'

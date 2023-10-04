@@ -12,12 +12,12 @@
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <!--
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.organization>kummari</sonar.organization>
-        <sonar.projectKey>kummari_b69am</sonar.projectKey>
-        <sonar.login>3ec29276c1e1d3be60097cd4e7c40c47bb72f33c</sonar.login>
-        -->
+
+        <sonar.host.url>http://54.88.227.232:900</sonar.host.url>
+        <sonar.organization>Project_1</sonar.organization>
+        <sonar.projectKey>Project_1</sonar.projectKey>
+        <sonar.login>sqp_bc8656cd4625d306fba3103aea693a71a5d36821</sonar.login>
+
     </properties>
 
     <!--
@@ -34,23 +34,23 @@
     </repository>	
 </distributionManagement>
     -->
-    
+        
 <distributionManagement>
-    
+
+    <repository>
+        <id>release</id>
+        <name>jfrog.cloudbinary.io-releases</name>
+        <url>http://54.90.15.148:8081/artifactory/libs-release-local</url>
+    </repository>
+
     <snapshotRepository>
         <id>snapshots</id>
-        <name>libs-snapshot-local</name>
-        <url>http://54.91.233.188:8082/artifactory/libs-snapshot-local/</url>
+        <name>jfrog.cloudbinary.io-snapshots</name>
+        <url>http://54.90.15.148:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
-    
-    <repository>
-        <id>releases</id>
-        <name>libs-release-local</name>
-        <url>http://54.91.233.188:8082/artifactory/libs-release-local/</url>
-    </repository>
-    
-</distributionManagement>    
-    
+
+</distributionManagement>
+
     
     <dependencies>
         <dependency>
